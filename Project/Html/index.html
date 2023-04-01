@@ -5,15 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SparkHive</title>
-        <link rel="stylesheet" href="../Css/carousel.css">
+        <script
+            src="https://unpkg.com/react@18/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <link rel="stylesheet" href="../Css/carousel.css" />
+        <link rel="stylesheet" href="../Css/all-products.css" />
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
             crossorigin="anonymous"
         />
-        <link href="../Css/Main.css" rel="stylesheet"/>
-        <link href="../Css/Navigator.css" rel="stylesheet"/>
+        <link href="../Css/Main.css" rel="stylesheet" />
+        <link href="../Css/Navigator.css" rel="stylesheet" />
         <script
             defer
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -34,93 +43,149 @@
         ></script>
     </head>
     <body>
-      <header>
-            <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary navbar-background">
+        <header>
+            <nav
+                class="navbar fixed-top navbar-expand-lg bg-body-tertiary navbar-background"
+            >
                 <div class="container-fluid">
-                  <a class="navbar-brand text-color logo-size" href="#"><img  src="../Pic/Logo.png" alt="Logo" width="50" class="d-inline-block align-text-top logo-size"></a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
-                    <button class="btn btn-outline-success" type="submit">Поиск</button>
-                  </form>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="navbar-brand active text-color" aria-current="page" href="#">Главная</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="navbar-brand text-color" href="#">Ссылка</a>
-                      </li>
-                    </ul>
-                  </div>
+                    <a class="navbar-brand text-color logo-size" href="#"
+                        ><img
+                            src="../Pic/Logo.png"
+                            alt="Logo"
+                            width="50"
+                            class="d-inline-block align-text-top logo-size"
+                    /></a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Переключатель навигации"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <form class="d-flex" role="search">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Поиск"
+                            aria-label="Поиск"
+                        />
+                        <button class="btn btn-outline-success" type="submit">
+                            Поиск
+                        </button>
+                    </form>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                    >
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a
+                                    class="navbar-brand active text-color"
+                                    aria-current="page"
+                                    href="#"
+                                    >Главная</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="navbar-brand text-color" href="#"
+                                    >Ссылка</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-              </nav>
-       
-        <div
-            id="carouselExampleIndicators"
-            class="carousel slide"
-            data-bs-ride="carousel"
-        >
-            <div class="carousel-indicators">
-                <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="0"
-                    class="active"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                ></button>
-                <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"
-                ></button>
-                <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="2"
-                    aria-label="Slide 3"
-                ></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../Pic/1.jpg" class="pictures-in-carousel" />
-                </div>
-                <div class="carousel-item">
-                    <img src="../Pic/2.jpg" class="pictures-in-carousel" />
-                </div>
-                <div class="carousel-item">
-                    <img src="../Pic/3.jpg" class="pictures-in-carousel" />
-                </div>
-            </div>
-            <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev"
+            </nav>
+
+            <div
+                id="carouselExampleIndicators"
+                class="carousel slide"
+                data-bs-ride="carousel"
             >
-                <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next"
-            >
-                <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+                <div class="carousel-indicators">
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                    ></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../Pic/1.jpg" class="pictures-in-carousel" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../Pic/2.jpg" class="pictures-in-carousel" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../Pic/3.jpg" class="pictures-in-carousel" />
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev"
+                >
+                    <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next"
+                >
+                    <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </header>
+        <script src="../Js/all-products.js"></script>
+        <div class="all-products">
+            <div id="first-line-of-products" class="line-of-products">
+                <div id="product1" class="product"></div>
+                <div id="product2" class="product"></div>
+                <div id="product3" class="product"></div>
+            </div>
+            <div id="second-line-of-products" class="line-of-products">
+                <div id="product4" class="product"></div>
+                <div id="product5" class="product"></div>
+                <div id="product6" class="product"></div>
+            </div>
+            <div id="third-line-of-products" class="line-of-products">
+                <div id="product7" class="product"></div>
+                <div id="product8" class="product"></div>
+                <div id="product9" class="product"></div>
+            </div>
+            <div id="four-line-of-products" class="line-of-products">
+                <div id="product10" class="product"></div>
+                <div id="product11" class="product"></div>
+                <div id="product12" class="product"></div>
+            </div>
         </div>
-    </header>
     </body>
 </html>
