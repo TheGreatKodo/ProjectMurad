@@ -1,0 +1,10 @@
+.line-of-products{
+    display: flex;
+}
+
+.product{
+    height: 300px;
+    background-color: black;
+    margin: 20px;
+    flex: auto;
+}
