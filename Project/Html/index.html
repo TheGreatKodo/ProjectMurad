@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SparkHive</title>
+        <script defer type="module" src="../Js/all-products.js"></script>
         <script
             src="https://unpkg.com/react@18/umd/react.development.js"
             crossorigin
@@ -43,6 +44,7 @@
         ></script>
     </head>
     <body>
+        <div class="main">
         <header>
             <nav
                 class="navbar fixed-top navbar-expand-lg bg-body-tertiary navbar-background"
@@ -164,27 +166,25 @@
                 </button>
             </div>
         </header>
-        <script src="../Js/all-products.js"></script>
-        <div class="all-products">
-            <div id="first-line-of-products" class="line-of-products">
-                <div id="product1" class="product"></div>
-                <div id="product2" class="product"></div>
-                <div id="product3" class="product"></div>
-            </div>
-            <div id="second-line-of-products" class="line-of-products">
-                <div id="product4" class="product"></div>
-                <div id="product5" class="product"></div>
-                <div id="product6" class="product"></div>
-            </div>
-            <div id="third-line-of-products" class="line-of-products">
-                <div id="product7" class="product"></div>
-                <div id="product8" class="product"></div>
-                <div id="product9" class="product"></div>
-            </div>
-            <div id="four-line-of-products" class="line-of-products">
-                <div id="product10" class="product"></div>
-                <div id="product11" class="product"></div>
-                <div id="product12" class="product"></div>
+        <div class="all-products container-fluid">
+            <div class="row ">
+                <div id="product1" class="product col"></div>
+                <div id="product2" class="product col"></div>
+                <div id="product3" class="product col"></div>
+
+
+                <div id="product4" class="product col"></div>
+                <div id="product5" class="product col"></div>
+                <div id="product6" class="product col"></div>
+
+
+                <div id="product7" class="product col"></div>
+                <div id="product8" class="product col"></div>
+                <div id="product9" class="product col"></div>
+
+                <div id="product10" class="product col"></div>
+                <div id="product11" class="product col"></div>
+                <div id="product12" class="product col"></div>
             </div>
         </div>
 
@@ -193,5 +193,7 @@
             <p class=> 2023 © SparkHive — модный интернет-магазин одежды, обуви и аксессуаров. Все права защищены. Доставка по всей России. </p>
         </div>
     </footer>
+    </div>>
+    <div class="product-card"></div>
     </body>
 </html>
