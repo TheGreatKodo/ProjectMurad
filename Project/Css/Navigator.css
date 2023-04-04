@@ -1,3 +1,4 @@
+
 .navbar-background {
     background-color: rgb(183, 83, 5);
     height: 100px;
@@ -48,3 +49,4 @@ a:hover{
  .login:active{
     border-color: black;
  }
+
