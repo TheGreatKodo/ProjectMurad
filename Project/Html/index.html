@@ -43,6 +43,7 @@
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
             crossorigin="anonymous"
         ></script>
+        <script type="module" defer src="../Js/LogIn.js"></script>
     </head>
     <body>
         <div class="main">
@@ -100,6 +101,25 @@
                             </li>
                         </ul>
                     </div>
+                    <form class="d-flex">
+                        <input
+                            class="form-control me-2 login"
+                            type="search"
+                            placeholder="Логин"
+                            aria-label="Логин"
+                            id="login"
+                        />
+                        <input
+                            class="form-control me-2 login"
+                            type="search"
+                            placeholder="Пароль"
+                            aria-label="пароль"
+                            id="password"
+                        />
+                        <button class="btn btn-outline-success log-in" type="button" id="button-login">
+                            Вход
+                        </button>
+                    </form>
                 </div>
             </nav>
 

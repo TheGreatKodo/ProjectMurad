@@ -1,4 +1,4 @@
 [
-    { "title": "The Alchemist", "author": "Paulo Coelho", "year": 1988 },
+    { "nickname": "The Alchemist", "password": "Paulo Coelho", "name": "Денис", "cart":[]},
     { "title": "The Prophet", "author": "Kahlil Gibran", "year": 1923 }
 ]

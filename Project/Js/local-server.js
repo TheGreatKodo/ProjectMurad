@@ -4,6 +4,11 @@ const fs = require("fs").promises;
 const host = "localhost";
 const port = 8000;
 
+// let express = require("express");
+// let path = require("path");
+// let app = express();
+// app.use(express.static(path.join(__dirname,"/html")));
+
 let users;
 let products;
 fs.readFile("../database/usersDb.json").then((content) => (users = content));
