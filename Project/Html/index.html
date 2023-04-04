@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SparkHive</title>
+        <script defer typee="module" src="../Js/cart.js"></script>
         <script defer type="module" src="../Js/all-products.js"></script>
         <script
             src="https://unpkg.com/react@18/umd/react.development.js"
@@ -101,25 +102,20 @@
                             </li>
                         </ul>
                     </div>
-                    <form class="d-flex">
-                        <input
-                            class="form-control me-2 login"
-                            type="search"
-                            placeholder="Логин"
-                            aria-label="Логин"
-                            id="login"
-                        />
-                        <input
-                            class="form-control me-2 login"
-                            type="search"
-                            placeholder="Пароль"
-                            aria-label="пароль"
-                            id="password"
-                        />
-                        <button class="btn btn-outline-success log-in" type="button" id="button-login">
-                            Вход
-                        </button>
-                    </form>
+                    <a hidden class="navbar-brand text-color logo-size" id="cart" href=""
+                        ><img
+                            src="../Pic/cart.png"
+                            alt="Logo"
+                            width="50"
+                            class="d-inline-block align-text-top logo-size"
+                    /></a>
+                    <a class="navbar-brand text-color logo-size" id="account" href=""
+                        ><img
+                            src="../Pic/account.png"
+                            alt="Logo"
+                            width="50"
+                            class="d-inline-block align-text-top logo-size"
+                    /></a>
                 </div>
             </nav>
 
@@ -209,8 +205,42 @@
             <p class=> 2023 © SparkHive — модный интернет-магазин одежды, обуви и аксессуаров. Все права защищены. Доставка по всей России. </p>
         </div>
     </footer>
-    </div>>
+    </div>
     <div hidden class="product-card">
+    </div>
+    <div hidden class="account login-page" id="login-page">
+        <p class="close" id="close1">&times</p>
+        <p hidden id="passError">Введен неправильный логин/пароль </p>
+        <form class="d-flex">
+            <input
+                class="form-control me-2 login"
+                type="search"
+                placeholder="Логин"
+                aria-label="Логин"
+                id="login"
+            />
+            <input
+                class="form-control me-2 login"
+                type="search"
+                placeholder="Пароль"
+                aria-label="пароль"
+                id="password"
+            />
+            <button class="btn btn-outline-success log-in" type="button" id="button-login">
+                Вход
+            </button>
+        </form>
+    </div>
+
+    <div hidden class="account login-page" id = 'state'>
+        <p class="close" id="close2">&times</p>
+        <p id = 'name'></p>
+        <button id = 'log-out' onclick="location.reload()">Выйти из аккаунта</button>
+    </div>
+
+    <div hidden id="incart" class="account login-page">
+        <p class="close" id="close3">&times</p>
+
     </div>
     </body>
 </html>

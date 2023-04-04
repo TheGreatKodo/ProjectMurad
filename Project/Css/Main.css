@@ -30,3 +30,18 @@ footer {
     pointer-events: none;
 }
 
+.login-page{
+    display: block;
+    position: fixed;
+    display: block;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    bottom: 20%;
+    height: auto;
+    width: auto;
+    transition: all 0.7s ease-out;
+    border: 1px solid #333;
+    background-color: whitesmoke;
+    padding: 20px;
+}
