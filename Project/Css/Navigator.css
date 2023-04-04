@@ -25,3 +25,26 @@ a:hover{
     width: 50%;
     
 }
+
+.log-in{
+    width: 76px;
+    height: 76px;
+    color:rgb(20, 20, 20);
+    border: 2px solid rgb(20, 20, 20);
+}
+
+.log-in:hover{
+    background-color: rgb(70, 70, 70);
+    color: rgb(241, 233, 220);
+    border-color: rgb(20, 20, 20);
+}
+
+.login{
+    width: 150px;
+    height: 38px;
+    position: flex;
+    margin-top: 19px;
+}
+ .login:active{
+    border-color: black;
+ }
