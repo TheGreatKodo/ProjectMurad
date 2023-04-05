@@ -34,12 +34,13 @@ async function makeCard(product, productsDb, index) {
     newProductCard.removeAttribute("hidden");
 
     itemCard += `<p class="close">&times</p>`;
-    itemCard += `<div class="product-contain"><div><img src="${productsDb[index].png_url}"></div>`;
-    itemCard += `<div><p>${productsDb[index].name}</p>`;
-    itemCard += `<p>&#10027&#10027&#10027&#10027&#10027 ${productsDb[index].marks}</p>`;
-    itemCard += `<p>${productsDb[index].price} &#8381</p>`;
-    itemCard += `<p>Описание</p>`;
-    itemCard += `<p>${productsDb[index].discription}</p></div></div>`;
+    itemCard += `<div class="product-contain"><div class="left-block"><img class="card-img" src="${productsDb[index].png_url}"></div>`;
+    itemCard += `<div class="right-block"><p class="product-text">${productsDb[index].name}</p>`;
+    itemCard += `<p class="product-mark">&#10027&#10027&#10027&#10027&#10027 ${productsDb[index].marks}</p>`;
+    itemCard += `<p class="card-price">${productsDb[index].price} &#8381</p>`;
+    itemCard += `<div id="btn"><button class="add-in-cart">Добавить в корзину</button></div>`;
+    itemCard += `<p class="product-text">Описание</p>`;
+    itemCard += `<p class="product-discription">${productsDb[index].discription}</p></div></div>`;
 
     newProductCard.innerHTML = itemCard;
 
