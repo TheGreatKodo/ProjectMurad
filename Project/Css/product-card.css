@@ -108,7 +108,7 @@
     transform: translateY(-7px);
   }
 
-  #btn{
+  .button-cart{
     display: flex;
     flex-direction: row;
     justify-content: center;
