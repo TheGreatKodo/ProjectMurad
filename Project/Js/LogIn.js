@@ -6,6 +6,8 @@ const startlogin = document.getElementById('account');
 const cartButton = document.getElementById('cart');
 const loginDiv = document.getElementById('login-page');
 const state = document.getElementById('state');
+const reg = document.getElementById('reg');
+
 class user{
     constructor(name, cart){
         this.name = name;
@@ -80,3 +82,7 @@ ButtonLogin.addEventListener('click', (e)=>{
 
 startlogin.addEventListener('click', funcLogin);
 
+reg.addEventListener('click', (e)=>{
+
+}
+)
