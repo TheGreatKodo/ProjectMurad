@@ -211,6 +211,7 @@
     <div hidden class="account login-page" id="login-page">
         <p class="close" id="close1">&times</p>
         <p hidden id="passError">Введен неправильный логин/пароль </p>
+        <div id="notreg">
         <form class="d-flex" id="loginForm">
             <input
                 class="form-control me-2 login"
@@ -231,8 +232,9 @@
             </button>
             <button id="reg"> Регистрация </button>
         </form>
-        <div hidden>
-        <form hidden class="d-flex" id="regForm">
+        </div> 
+        <div hidden id="regForm">
+        <form hidden class="d-flex" >
             <input
                 class="form-control me-2 login"
                 type="search"
@@ -247,7 +249,16 @@
                 aria-label="пароль"
                 id="passwordReg"
             />
-            <button class="btn btn-outline-success log-in" type="button" id="button-login">
+
+            <input
+                class="form-control me-2 login"
+                type="search"
+                placeholder="Имя"
+                aria-label="Имя"
+                id="Regname"
+            />
+
+            <button class="btn btn-outline-success log-in" type="button" id="button-reg">
                 Зарегистрироваться
             </button>
         </form>

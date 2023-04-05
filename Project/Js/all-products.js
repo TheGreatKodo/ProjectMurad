@@ -33,12 +33,12 @@ async function makeCard(product, productsDb, index) {
     document.querySelector(".main").setAttribute("id", `overlay`);
     newProductCard.removeAttribute("hidden");
 
-    itemCard += `<p class="close">&times</p>`;
-    itemCard += `<div class="product-contain"><div class="left-block"><img class="card-img" src="${productsDb[index].png_url}"></div>`;
+    itemCard += `<p class="close">&times</p>`
+             +`<div class="product-contain"><div class="left-block"><img class="card-img" src="${productsDb[index].png_url}"></div>`;
     itemCard += `<div class="right-block"><p class="product-text">${productsDb[index].name}</p>`;
     itemCard += `<p class="product-mark">&#10027&#10027&#10027&#10027&#10027 ${productsDb[index].marks}</p>`;
     itemCard += `<p class="card-price">${productsDb[index].price} &#8381</p>`;
-    itemCard += `<div id="btn"><button class="add-in-cart">Добавить в корзину</button></div>`;
+    itemCard += `<div id='product-${productsDb[index].id}' class='button-cart'><button id='btn' class="add-in-cart">Добавить в корзину</button></div>`;
     itemCard += `<p class="product-text">Описание</p>`;
     itemCard += `<p class="product-discription">${productsDb[index].discription}</p></div></div>`;
 
@@ -53,3 +53,4 @@ async function makeCard(product, productsDb, index) {
 
     console.log(product_card);
 }
+
