@@ -1,4 +1,5 @@
 const cart = document.getElementById('cart');
+const addproduct = document.getElementById('btn');
 
 cart.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -10,4 +11,5 @@ cart.addEventListener('click', (e)=>{
         document.querySelector(".main").removeAttribute("id", `overlay`);
     }
     );
-})
+});
+
