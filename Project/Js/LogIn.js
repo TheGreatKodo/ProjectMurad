@@ -167,9 +167,26 @@ cart.addEventListener('click', (e)=>{
         return i == self.indexOf(v);
     });
 
+    let allprice = 0;
     SetCart.forEach(element => {
         let product = products.find(products => products.id == element);
-        document.getElementById('incart1').innerHTML += `<div> <img src ='${product.png_url}' style='width:100px'> <p>${count(window.currentAccount.cart, product.id)}</p> </div>`;
+        let kol = count(window.currentAccount.cart, product.id)
+        let price = +kol * (+product.price);
+        allprice+=price;
+        document.getElementById('incart1').innerHTML += `<div> <img src ='${product.png_url}' style='width:100px'> <div> <button class='minus' id='minus-${product.id}'>-</button> <p class='kol'>${kol}</p> <button class='plus' id='plus-${product.id}'>+</button> </div> <p class='price'>${price}</p> </div>`;
+        let buttonsPlus = document.querySelectorAll('.plus');
+        console.log(cart);
+
+        buttonsPlus.forEach(element => {
+            console.log(element);
+            element.addEventListener('click', (e)=>{
+                e.preventDefault();
+                window.currentAccount.cart.push(element.id.split('-')[1]);
+                let event = new Event("click");
+                close.dispatchEvent(event, {bubbles: true});
+                cart.dispatchEvent(event, {bubbles: true});
+            })
+        });
     });
 
     let close = document.getElementById("close3"); 
@@ -179,7 +196,7 @@ cart.addEventListener('click', (e)=>{
         document.querySelector(".main").removeAttribute("id", `overlay`);
     }
     );
-    
+    document.getElementById('incart1').innerHTML += `<div> <p> ${allprice} </p>  </div>`;
 });
 
 
