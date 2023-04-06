@@ -1,4 +1,5 @@
 import users from '../database/usersDb.json' assert {type: 'json'};
+import products from '../database/productsDb.json' assert {type: 'json'};
 
 const login = document.getElementById('login');
 const password = document.getElementById('password');
@@ -14,6 +15,7 @@ const passwordReg = document.getElementById('passwordReg');
 const notreg = document.getElementById('notreg');
 const buttonReg = document.getElementById('button-reg');
 const namereg = document.getElementById('Regname');
+const backreg = document.getElementById('galyotmena');
 
 class user{
     constructor(name, cart){
@@ -118,6 +120,12 @@ buttonreg.addEventListener('click', (e)=>{
     regForm.removeAttribute('hidden');
 });
 
+backreg.addEventListener('click', (e)=>{
+    e.preventDefault();
+    regForm.setAttribute('hidden', '');
+    notreg.removeAttribute('hidden');
+});
+
 buttonReg.addEventListener('click', (e) =>{
     e.preventDefault();
     if(passwordReg.value != '' && loginReg.value != '' && namereg.value != ''){
@@ -138,27 +146,47 @@ buttonReg.addEventListener('click', (e) =>{
 
 const cart = document.getElementById('cart');
 
+const count = (arr, element) => {
+    console.log(arr);
+    console.log(element);
+    const kol = arr.filter(e => {
+        if (e == element){
+            return true;
+        }
+        return false;
+    }).length;
+    return kol;
+}
 
 cart.addEventListener('click', (e)=>{
     e.preventDefault();
     document.querySelector(".main").setAttribute("id", `overlay`);
-    document.getElementById('incart').removeAttribute("hidden", '');
-    const close = document.getElementById("close3");
+    document.getElementById('incart').removeAttribute("hidden");
+
+    let SetCart = window.currentAccount.cart.filter((v, i, self) => {
+        return i == self.indexOf(v);
+    });
+
+    SetCart.forEach(element => {
+        let product = products.find(products => products.id == element);
+        document.getElementById('incart1').innerHTML += `<div> <img src ='${product.png_url}' style='width:100px'> <p>${count(window.currentAccount.cart, product.id)}</p> </div>`;
+    });
+
+    let close = document.getElementById("close3"); 
     close.addEventListener("click", () =>{
-        document.getElementById('incart').setAttribute("hidden", "")
+        document.getElementById('incart1').innerHTML = '';
+        document.getElementById('incart').setAttribute("hidden", " ")
         document.querySelector(".main").removeAttribute("id", `overlay`);
     }
     );
-    document.getElementById('incart').innerHTML = window.currentAccount.cart;  
+    
 });
 
 
 
-async function Funccart (){
-    const addproduct = document.getElementById('btn');
-    await addproduct.addEventListener('click', (e)=>{
+const addproduct = document.querySelector('.add-in-cart');
+addproduct.addEventListener('click', (e)=>{
         e.preventDefault();
-        const idProduct = addproduct.parentElement.id.split('-')[1];
+        const idProduct = addproduct.id.split('-')[1];
         window.currentAccount.cart.push(idProduct);
-    });
-}
+});
