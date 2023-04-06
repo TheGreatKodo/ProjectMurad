@@ -26,6 +26,7 @@
         />
         <link href="../Css/Main.css" rel="stylesheet" />
         <link href="../Css/Navigator.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../Css/login.css">
         <script
             defer
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -209,7 +210,8 @@
         <p hidden id="passError">Введен неправильный логин/пароль </p>
         <div id="notreg">
         <form class="d-flex" id="loginForm">
-            <input
+            <div class="login-and-register-input">
+                <input
                 class="form-control me-2 login"
                 type="search"
                 placeholder="Логин"
@@ -223,15 +225,19 @@
                 aria-label="пароль"
                 id="password"
             />
-            <button class="btn btn-outline-success log-in" type="button" id="button-login">
+            </div>
+            <div class="login-and-register-button">
+                <button class="" type="button" id="button-login">
                 Вход
             </button>
             <button id="reg"> Регистрация </button>
+            </div>
         </form>
         </div> 
         <div hidden id="regForm">
-        <form hidden class="d-flex" >
-            <input
+        <form hidden class="d-flex" id="reg-form" >
+            <div class="reg-input">
+                <input
                 class="form-control me-2 login"
                 type="search"
                 placeholder="Логин"
@@ -253,10 +259,12 @@
                 aria-label="Имя"
                 id="Regname"
             />
-
-            <button class="btn btn-outline-success log-in" type="button" id="button-reg">
+            </div>
+            <div class="reg-button">
+                <button class="btn btn-outline-success log-in" type="button" id="button-reg">
                 Зарегистрироваться
             </button>
+            </div>
         </form>
         </div>
     </div>
