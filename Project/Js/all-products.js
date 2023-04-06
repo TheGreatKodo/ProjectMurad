@@ -33,24 +33,31 @@ async function makeCard(product, productsDb, index) {
     document.querySelector(".main").setAttribute("id", `overlay`);
     newProductCard.removeAttribute("hidden");
 
-    itemCard += `<p class="close">&times</p>`
-             +`<div class="product-contain"><div class="left-block"><img class="card-img" src="${productsDb[index].png_url}"></div>`;
-    itemCard += `<div class="right-block"><p class="product-text">${productsDb[index].name}</p>`;
-    itemCard += `<p class="product-mark">&#10027&#10027&#10027&#10027&#10027 ${productsDb[index].marks}</p>`;
-    itemCard += `<p class="card-price">${productsDb[index].price} &#8381</p>`;
-    itemCard += `<div id='product-${productsDb[index].id}' class='button-cart'><button id='btn' class="add-in-cart">Добавить в корзину</button></div>`;
-    itemCard += `<p class="product-text">Описание</p>`;
-    itemCard += `<p class="product-discription">${productsDb[index].discription}</p></div></div>`;
+    document
+        .querySelector(".card-img")
+        .setAttribute("src", `${productsDb[index].png_url}`);
 
-    newProductCard.innerHTML = itemCard;
+    document.querySelector(
+        ".product-text-name"
+    ).innerHTML = `${productsDb[index].name}`;
+    document.querySelector(
+        ".product-mark"
+    ).innerHTML = `&#10027&#10027&#10027&#10027&#10027 ${productsDb[index].marks}`;
+    document.querySelector(
+        ".card-price"
+    ).innerHTML = `${productsDb[index].price} &#8381</p>`;
+    document
+        .querySelector(".add-in-cart")
+        .setAttribute("id", `product-${productsDb[index].id}`);
+    document.querySelector(
+        ".product-discription"
+    ).innerHTML = `${productsDb[index].discription}`;
 
     const close = document.querySelector(".close");
-    await close.addEventListener("click", () =>{
-        newProductCard.setAttribute("hidden", "")
+    await close.addEventListener("click", () => {
+        newProductCard.setAttribute("hidden", "");
         document.querySelector(".main").removeAttribute("id", `overlay`);
-    }
-    );
+    });
 
     console.log(product_card);
 }
-
