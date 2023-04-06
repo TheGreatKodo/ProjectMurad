@@ -173,7 +173,7 @@ cart.addEventListener('click', (e)=>{
         let kol = count(window.currentAccount.cart, product.id)
         let price = +kol * (+product.price);
         allprice+=price;
-        document.getElementById('incart1').innerHTML += `<div> <img src ='${product.png_url}' style='width:100px'> <div> <button class='minus' id='minus-${product.id}'>-</button> <p class='kol'>${kol}</p> <button class='plus' id='plus-${product.id}'>+</button> </div> <p class='price'>${price}</p> </div>`;
+        document.getElementById('incart1').innerHTML += `<div class="product-in-cart"> <div class="left-block-in-cart"><img class="img-in-product-cart" src ='${product.png_url}'> </div><div class="right-block-in-cart"> <div class="add-item"><button class='minus' id='minus-${product.id}'>-</button> <p class='kol'>${kol}</p> <button class='plus' id='plus-${product.id}'>+</button> </div> <div class="text-under-button"> <p class="total-price-for-item">Totel price for this item : </p> <p class='price'>${price} &#8381</p> </div> </div>  </div>`;
         let buttonsPlus = document.querySelectorAll('.plus');
         console.log(cart);
 
@@ -196,7 +196,7 @@ cart.addEventListener('click', (e)=>{
         document.querySelector(".main").removeAttribute("id", `overlay`);
     }
     );
-    document.getElementById('incart1').innerHTML += `<div> <p> ${allprice} </p>  </div>`;
+    document.getElementById('incart1').innerHTML += `<div class="total-price"> <p class="total-price-text">Total price is : ${allprice} &#8381</p>  </div>`;
 });
 
 
