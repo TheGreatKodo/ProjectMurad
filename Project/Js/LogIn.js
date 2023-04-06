@@ -143,7 +143,7 @@ buttonReg.addEventListener('click', (e) =>{
 });
 
 
-
+var buttonsPlus;
 const cart = document.getElementById('cart');
 
 const count = (arr, element) => {
@@ -177,16 +177,7 @@ cart.addEventListener('click', (e)=>{
         let buttonsPlus = document.querySelectorAll('.plus');
         console.log(cart);
 
-        buttonsPlus.forEach(element => {
-            console.log(element);
-            element.addEventListener('click', (e)=>{
-                e.preventDefault();
-                window.currentAccount.cart.push(element.id.split('-')[1]);
-                let event = new Event("click");
-                close.dispatchEvent(event, {bubbles: true});
-                cart.dispatchEvent(event, {bubbles: true});
-            })
-        });
+        
     });
 
     let close = document.getElementById("close3"); 
@@ -207,3 +198,19 @@ addproduct.addEventListener('click', (e)=>{
         const idProduct = addproduct.id.split('-')[1];
         window.currentAccount.cart.push(idProduct);
 });
+
+if (buttonsPlus){
+buttonsPlus.forEach(element => {
+    console.log(element);
+    element.addEventListener('click', (e)=>{
+        e.preventDefault();
+    //     window.currentAccount.cart.push(element.id.split('-')[1]);
+    //     let event = new Event("click");
+    //     document.getElementById('incart1').innerHTML = '';
+    //     document.getElementById('incart').setAttribute("hidden", " ")
+    //     document.querySelector(".main").removeAttribute("id", `overlay`);
+    //     console.log(this);
+    //     cart.dispatchEvent(event, {bubbles: true});
+    console.log('1111111111121');
+     })
+})};
