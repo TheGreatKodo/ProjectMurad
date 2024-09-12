@@ -1,0 +1,16 @@
+#carouselExampleIndicators{
+    background-color: rgb(20, 20, 20);
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.pictures-in-carousel {
+    display: flex;
+    width: 80%; 
+    height: 350px; 
+    background-repeat: no-rpeat;
+    background-position: center;
+    -webkit-background-size: cover; 
+    background-size: cover; 
+    margin: 0 auto;
+  }

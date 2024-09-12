@@ -1,0 +1,127 @@
+.product-card {
+    display: block;
+    position: fixed;
+    display: block;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    bottom: 20%;
+    height: auto;
+    width: auto;
+    transition: all 0.7s ease-out;
+    border: 1px solid #333;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.close {
+    cursor: pointer;
+    display: flex;
+    justify-content: right;
+    font-size: 20px;
+    margin: 1px;
+}
+
+.product-contain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card-img {
+    height: 400px;
+    width: 50px;
+}
+
+.right-block {
+    width: 50%;
+    height: 100%;
+}
+
+.left-block {
+    width: 50%;
+    height: 100%;
+}
+
+.product-discription {
+    margin-left: 10px;
+    height: 200px;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+    font-family: "Montserrat", sans-serif;
+}
+
+.card-price {
+    color: #e34d38;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.product-text {
+    font-weight: 700;
+    color: #39404b;
+    margin-left: 27px;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 2;
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.product-mark {
+    height: 14px;
+    line-height: 14px;
+    margin: 7px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.add-in-cart {
+    text-decoration: none;
+    display: flex;
+    width: 250px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.add-in-cart:hover {
+    background: #2ee59d;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
+    color: white;
+    transform: translateY(-7px);
+}
+
+.button-cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product-text-name {
+    font-weight: 700;
+    color: #39404b;
+    margin-left: 27px;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 2;
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+}
